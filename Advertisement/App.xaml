@@ -1,0 +1,15 @@
+﻿<Application x:Class="Advertisement.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Advertisement"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <ControlTemplate TargetType="Button" x:Key="Btn">
+            <Border CornerRadius="17" BorderThickness="0.5" BorderBrush="#1CD9CD" Height="40" Width="250" Margin="4">
+                <ContentControl  VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Calibry" FontWeight="Light" FontSize="24" Foreground="#1CD9CD" Content="{TemplateBinding Content}"/>
+            </Border>
+        </ControlTemplate>
+        
+    </Application.Resources>
+</Application>

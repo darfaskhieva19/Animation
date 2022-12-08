@@ -1,0 +1,35 @@
+﻿<Window x:Class="Advertisement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Advertisement"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="950" Background="#1E1E1E">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1.2*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0">
+            <TextBlock Name="MainTxt" Text="СТАНЬ" FontSize="52" FontWeight="ExtraBold"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <StackPanel HorizontalAlignment="Left"  VerticalAlignment="Center">
+                    <TextBlock Name="txt" Text="ЛУЧШЕЙ" Foreground="White" FontSize="38" Margin="35,10,0,0"/>
+                    <TextBlock Name="txtV" Text="ВЕРСИЕЙ" Foreground="White" FontSize="38" Margin="65,10,0,0"/>
+                    <TextBlock Name="txtMe" Text="СЕБЯ" Foreground="White" FontSize="38" Margin="158,10,0,0"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center">
+                <Button Name="btnTraining" Content="Пробная тренировка" Template="{StaticResource Btn}" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
