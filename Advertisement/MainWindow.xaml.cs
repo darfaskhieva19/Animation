@@ -24,7 +24,7 @@ namespace Advertisement
         public MainWindow()
         {
             InitializeComponent();
-             //изменение цвета и размера текста
+
             DoubleAnimation FSA = new DoubleAnimation();
             FSA.From = 64;
             FSA.To = 112;
@@ -42,7 +42,6 @@ namespace Advertisement
             BA.Duration = TimeSpan.FromSeconds(7);
             MainTxt.Foreground.BeginAnimation(SolidColorBrush.ColorProperty, BA);
 
-            //изменение ширины, границ и цвета кнопки
             ThicknessAnimation MA = new ThicknessAnimation(); // анимация границ
             MA.From = new Thickness(30, 30, 30, 30);
             MA.To = new Thickness(0, 0, 0, 0);
@@ -52,20 +51,39 @@ namespace Advertisement
             btnTraining.BeginAnimation(MarginProperty, MA);
 
             DoubleAnimation doubleAnimationHeight = new DoubleAnimation();
-            doubleAnimationHeight.From = 15;
-            doubleAnimationHeight.To = 40;
+            doubleAnimationHeight.From = 45;
+            doubleAnimationHeight.To = 60;
             doubleAnimationHeight.Duration = TimeSpan.FromSeconds(2);
             doubleAnimationHeight.RepeatBehavior = RepeatBehavior.Forever;
             doubleAnimationHeight.AutoReverse = true;
             btnTraining.BeginAnimation(HeightProperty, doubleAnimationHeight);
 
-            //DoubleAnimation WA = new DoubleAnimation(); // создание объекта для настройки
-            //WA.From = 50; // начальное значение свойства
-            //WA.To = 100; // конечное значение свойства
-            //WA.Duration = TimeSpan.FromSeconds(2); // продолжительность анимации (в
-            //WA.RepeatBehavior = RepeatBehavior.Forever; // бесконечность анимации
-            //WA.AutoReverse = true; // воспроизведение временной шкалы в обратном порядке
-            //btnTraining.BeginAnimation(WidthProperty, WA); // «навешивание» анимации на свойство ширины
+            DoubleAnimation WA = new DoubleAnimation(); // создание объекта для настройки
+            WA.From = 270; // начальное значение свойства
+            WA.To = 310; // конечное значение свойства
+            WA.Duration = TimeSpan.FromSeconds(5); // продолжительность анимации (в
+            WA.RepeatBehavior = RepeatBehavior.Forever; // бесконечность анимации
+            WA.AutoReverse = true; // воспроизведение временной шкалы в обратном порядке
+            btnTraining.BeginAnimation(WidthProperty, WA); // «навешивание» анимации на свойство ширины
+
+            ColorAnimation BC = new ColorAnimation(); // создание объекта для настройки анимации
+            ColorConverter CCA = new ColorConverter(); // создание объекта для конвертации кода в цвет
+            Color CAstart = (Color)CCA.ConvertFrom("#ffffff"); // присваивание начального цвета эл-ту
+            btnTraining.Background = new SolidColorBrush(CAstart); // закрашивание эл-та сплошным цветом
+            BC.From = CAstart; // начальное значение свойства
+            BC.To = (Color)CCA.ConvertFrom("#1CD9CD"); // конечное значение свойства
+            BC.Duration = TimeSpan.FromSeconds(5);
+            btnTraining.Background.BeginAnimation(SolidColorBrush.ColorProperty, BC);
+
+            DoubleAnimation FT = new DoubleAnimation();
+            FT.From = 20;
+            FT.To = 24;
+            FT.Duration = TimeSpan.FromSeconds(2);
+            FT.RepeatBehavior = RepeatBehavior.Forever;
+            FT.AutoReverse = true;
+            btnTraining.BeginAnimation(FontSizeProperty, FT);
+
+
         }
     }
 }

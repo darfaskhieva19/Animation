@@ -8,27 +8,27 @@
         Title="MainWindow" Height="600" Width="950" Background="#1E1E1E">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4.5*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1.2*"/>
-                <RowDefinition Height="1*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0">
             <TextBlock Name="MainTxt" Text="СТАНЬ" FontSize="52" FontWeight="ExtraBold"/>
             </StackPanel>
             <StackPanel Grid.Row="1">
                 <StackPanel HorizontalAlignment="Left"  VerticalAlignment="Center">
-                    <TextBlock Name="txt" Text="ЛУЧШЕЙ" Foreground="White" FontSize="38" Margin="35,10,0,0"/>
-                    <TextBlock Name="txtV" Text="ВЕРСИЕЙ" Foreground="White" FontSize="38" Margin="65,10,0,0"/>
-                    <TextBlock Name="txtMe" Text="СЕБЯ" Foreground="White" FontSize="38" Margin="158,10,0,0"/>
+                    <TextBlock Name="txt" Text="ЛУЧШЕЙ" Foreground="White" FontSize="42" Margin="35,10,0,0"/>
+                    <TextBlock Name="txtV" Text="ВЕРСИЕЙ" Foreground="White" FontSize="42" Margin="105,10,0,0"/>
+                    <TextBlock Name="txtMe" Text="СЕБЯ" Foreground="White" FontSize="42" Margin="258,10,0,0"/>
                 </StackPanel>
             </StackPanel>
-            <StackPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center">
-                <Button Name="btnTraining" Content="Пробная тренировка" Template="{StaticResource Btn}" />
+            <StackPanel Grid.Row="2" HorizontalAlignment="Left" Margin="5"> 
+                <Button Name="btnTraining" Content="Пробная тренировка"/>
             </StackPanel>
         </Grid>
     </Grid>
