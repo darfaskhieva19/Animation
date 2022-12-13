@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Advertisement"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="950" Background="#1E1E1E">
+        Title="MainWindow" Height="600" Width="795" Background="#1E1E1E">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="4.5*"/>
+            <ColumnDefinition Width="4*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
@@ -18,18 +18,21 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0">
-            <TextBlock Name="MainTxt" Text="СТАНЬ" FontSize="52" FontWeight="ExtraBold"/>
+                <TextBlock Name="MainTxt" Text="СТАНЬ" FontSize="52" FontWeight="ExtraBold" Foreground="#1CD9CD"/>
             </StackPanel>
             <StackPanel Grid.Row="1">
                 <StackPanel HorizontalAlignment="Left"  VerticalAlignment="Center">
-                    <TextBlock Name="txt" Text="ЛУЧШЕЙ" Foreground="White" FontSize="42" Margin="35,10,0,0"/>
-                    <TextBlock Name="txtV" Text="ВЕРСИЕЙ" Foreground="White" FontSize="42" Margin="105,10,0,0"/>
-                    <TextBlock Name="txtMe" Text="СЕБЯ" Foreground="White" FontSize="42" Margin="258,10,0,0"/>
+                    <TextBlock Name="txt" Text="ЛУЧШЕЙ" Foreground="White" FontSize="42" Margin="45,10,0,0"/>
+                    <TextBlock Name="txtV" Text="ВЕРСИЕЙ" Foreground="White" FontSize="42" Margin="115,10,0,0"/>
+                    <TextBlock Name="txtMe" Text="СЕБЯ" Foreground="White" FontSize="42" Margin="268,10,0,0"/>
                 </StackPanel>
             </StackPanel>
-            <StackPanel Grid.Row="2" HorizontalAlignment="Left" Margin="5"> 
-                <Button Name="btnTraining" Content="Пробная тренировка"/>
+            <StackPanel Grid.Row="2" Margin="5">
+                <Button Name="btnTraining" Content="Пробная тренировка" FontSize="22" Background="#ffffff" Template="{StaticResource Btn}"/>
             </StackPanel>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Image Name="img" Source="\image/photo.png" Width="345" Height="500" VerticalAlignment="Bottom"/>
         </Grid>
     </Grid>
 </Window>

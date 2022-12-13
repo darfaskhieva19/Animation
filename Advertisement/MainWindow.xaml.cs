@@ -31,16 +31,7 @@ namespace Advertisement
             FSA.Duration = TimeSpan.FromSeconds(5);
             FSA.RepeatBehavior = RepeatBehavior.Forever;
             FSA.AutoReverse = true;
-            MainTxt.BeginAnimation(FontSizeProperty, FSA);
-
-            ColorAnimation BA = new ColorAnimation(); // создание объекта для настройки
-            ColorConverter CC = new ColorConverter(); // создание объекта для конвертации
-            Color Cstart = (Color)CC.ConvertFrom("#ffffff"); // присваивание начального
-            MainTxt.Foreground = new SolidColorBrush(Cstart); // закрашивание эл-та
-            BA.From = Cstart; // начальное значение свойства
-            BA.To = (Color)CC.ConvertFrom("#1CD9CD"); // конечное значение
-            BA.Duration = TimeSpan.FromSeconds(7);
-            MainTxt.Foreground.BeginAnimation(SolidColorBrush.ColorProperty, BA);
+            MainTxt.BeginAnimation(FontSizeProperty, FSA);            
 
             ThicknessAnimation MA = new ThicknessAnimation(); // анимация границ
             MA.From = new Thickness(30, 30, 30, 30);
@@ -68,22 +59,37 @@ namespace Advertisement
 
             ColorAnimation BC = new ColorAnimation(); // создание объекта для настройки анимации
             ColorConverter CCA = new ColorConverter(); // создание объекта для конвертации кода в цвет
-            Color CAstart = (Color)CCA.ConvertFrom("#ffffff"); // присваивание начального цвета эл-ту
+            Color CAstart = (Color)CCA.ConvertFrom("#ffffff");// присваивание начального цвета эл-ту
             btnTraining.Background = new SolidColorBrush(CAstart); // закрашивание эл-та сплошным цветом
             BC.From = CAstart; // начальное значение свойства
             BC.To = (Color)CCA.ConvertFrom("#1CD9CD"); // конечное значение свойства
             BC.Duration = TimeSpan.FromSeconds(5);
+            BC.AutoReverse = true;
             btnTraining.Background.BeginAnimation(SolidColorBrush.ColorProperty, BC);
 
             DoubleAnimation FT = new DoubleAnimation();
-            FT.From = 20;
+            FT.From = 22;
             FT.To = 24;
             FT.Duration = TimeSpan.FromSeconds(2);
             FT.RepeatBehavior = RepeatBehavior.Forever;
             FT.AutoReverse = true;
             btnTraining.BeginAnimation(FontSizeProperty, FT);
 
+            DoubleAnimation IM = new DoubleAnimation(); 
+            IM.From = 345; 
+            IM.To = 360; 
+            IM.Duration = TimeSpan.FromSeconds(2); 
+            IM.RepeatBehavior = RepeatBehavior.Forever; 
+            IM.AutoReverse = true; 
+            img.BeginAnimation(WidthProperty, IM); 
 
+            DoubleAnimation IMG = new DoubleAnimation(); 
+            IMG.From = 500;
+            IMG.To = 525; 
+            IMG.Duration = TimeSpan.FromSeconds(2); 
+            IMG.RepeatBehavior = RepeatBehavior.Forever; 
+            IMG.AutoReverse = true; 
+            img.BeginAnimation(HeightProperty, IMG); 
         }
     }
 }
